@@ -1,9 +1,9 @@
-DROP DATABASE IF EXISTS wine-merchant-bottles;
-CREATE DATABASE wine-merchant-bottles;
-wine-merchant-bottles
-\c wine-merchant-bottles
+DROP DATABASE IF EXISTS wine-merchant-cellar;
+CREATE DATABASE wine-merchant-cellar;
 
-CREATE TABLE items(
+\c wine-merchant-cellar
+
+CREATE TABLE wines(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   winemaker VARCHAR(255),

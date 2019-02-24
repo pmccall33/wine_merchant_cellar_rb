@@ -25,4 +25,24 @@ class ApplicationController < Sinatra::Base
 		"Welcome to the Wine Shoppe"
 	end
 
+	get '/test' do
+		"Welcome to test mode, friend"
+
+		binding.pry
+	end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
