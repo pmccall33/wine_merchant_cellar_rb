@@ -5,7 +5,7 @@
 	<li>
 		<% @wines.each do |wine| %>
 			<h3><%= wine.name %></h3>
-			<p>A <%= wine.style%> wine from <%= wine.region %> from <%= wine.year %>s </p>
+			<p>A <%= wine.style %> produced by <%= wine.winemaker %> from <%= wine.region %> from <%= wine.year %>s </p>
 		<% end %>
 
 	</li>	
