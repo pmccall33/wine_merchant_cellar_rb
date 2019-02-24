@@ -1,9 +1,14 @@
-<h2>I am the Wine Index page, pleasure to meet ya.</h2>
+<h2>Wines in the Cellar</h2>
 
 <ul>
-		
+	
+	<li>
+		<% @wines.each do |wine| %>
+			<h3><%= wine.name %></h3>
+			<p>A <%= wine.style%> wine from <%= wine.region %> from <%= wine.year %>s </p>
+		<% end %>
 
-	<li></li>	
+	</li>	
 
 
 </ul>
