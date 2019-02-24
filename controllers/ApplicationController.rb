@@ -6,12 +6,12 @@ class ApplicationController < Sinatra::Base
 	# DB connection
 	ActiveRecord::Base.establish_connection(
 	    :adapter => 'postgresql',
-	    :database => 'wine-merchant-cellar'
+	    :database => 'wine_merchant_cellar'
 	  )
 
 
 	# middleware here
-	use Rack::MethodOverride # as in express, we "use" middleware
+	use Rack::MethodOverride
 	set :method_override, true
 
 
@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 	set :public_dir, File.expand_path('../../public', __FILE__)
 
 
-	# basec site routes
+	# basic site routes
 	get '/' do
 		"Welcome to the Wine Shoppe"
 	end
