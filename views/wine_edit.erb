@@ -1,0 +1,11 @@
+<h2>Edit your Cellar</h2>
+ 
+<form action="/wines/<%= @wine.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+	<input type="text" name="name" value="<%= @wine.name %>"><br />
+	<input type="text" name="winemaker" value="<%= @wine.winemaker %>"><br />
+	<input type="text" name="region" value="<%= @wine.region %>"><br />
+	<input type="text" name="style" value="<%= @wine.style %>"><br />
+	<input type="text" name="year" value="<%= @wine.year %>"><br />
+	<button>Update Wine</button>
+</form>
