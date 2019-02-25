@@ -44,4 +44,25 @@ class WineController < ApplicationController
 
 	end
 
+	delete '/:id' do
+		wine = Wine.find params[:id]
+		pp wine
+
+		# DESTROY IT!!!!!
+		wine.destroy
+
+		redirect '/wines'
+
+	end
+
 end
+
+
+
+
+
+
+
+
+
+

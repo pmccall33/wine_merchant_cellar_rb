@@ -6,10 +6,12 @@
 		<% @wines.each do |wine| %>
 			<h3><%= wine.name %></h3>
 			<p>A <%= wine.style %> produced by <%= wine.winemaker %> from <%= wine.region %> A <%= wine.year %> vintage </p>
+			<form action="/wines/<%= wine.id %>" method="POST">
+		        <input type="hidden" name="_method" value="DELETE">
+		        <button>Delete Wine</button>
+		    </form>
 		<% end %>
 
 	</li>	
-
-
 </ul>
 
